@@ -3,150 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>توليف Mega 100 | أضخم موسوعة أدوات</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>ZIXOO PRO | المكتبة الشاملة 2026</title>
     <style>
-        :root { --p: #00e676; --s: #2979ff; --bg: #08090a; --c: rgba(255,255,255,0.04); }
-        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: #fff; margin: 0; padding: 10px; }
-        .hero { text-align: center; padding: 60px 20px; border-bottom: 1px solid #222; }
-        .hero h1 { font-size: 3rem; margin: 0; background: linear-gradient(90deg, var(--p), var(--s)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        :root { --neon: #00f2fe; --dark: #050508; --glass: rgba(255, 255, 255, 0.05); }
+        body { background: var(--dark); color: white; font-family: 'Cairo', sans-serif; margin: 0; padding: 80px 0; }
+        .ad-banner { position: fixed; left: 0; width: 100%; height: 60px; background: #000; border: 1px solid var(--neon); display: flex; align-items: center; justify-content: center; z-index: 4000; font-weight: bold; color: var(--neon); font-size: 13px; }
+        #top-ad { top: 0; } #bottom-ad { bottom: 0; }
+        .container { padding: 15px; max-width: 1100px; margin: auto; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; }
+        .card { background: var(--glass); border: 1px solid rgba(0, 242, 254, 0.1); padding: 20px 10px; border-radius: 20px; cursor: pointer; transition: 0.3s; height: 110px; display: flex; flex-direction: column; justify-content: center; }
+        .card:hover { border-color: var(--neon); transform: translateY(-5px); background: rgba(0, 242, 254, 0.1); box-shadow: 0 0 15px rgba(0,242,254,0.2); }
+        .card b { color: var(--neon); font-size: 14px; }
+        .card small { font-size: 10px; color: #aaa; margin-top: 5px; }
         
-        .search-area { max-width: 700px; margin: -30px auto 30px; position: sticky; top: 15px; z-index: 1000; }
-        .search-area input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 2px solid var(--p); background: rgba(8,9,10,0.95); color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.5); outline: none; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; max-width: 1400px; margin: auto; }
-        .card { background: var(--c); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 15px; transition: 0.25s; }
-        .card:hover { border-color: var(--s); transform: translateY(-3px); background: rgba(255,255,255,0.07); }
-        .card h3 { font-size: 0.95rem; color: var(--p); margin: 0 0 12px 0; }
-        
-        input, select { width: 100%; padding: 8px; margin: 5px 0; border-radius: 6px; border: 1px solid #333; background: #000; color: #fff; font-size: 0.85rem; }
-        button { width: 100%; padding: 10px; border-radius: 6px; border: none; background: linear-gradient(45deg, var(--p), var(--s)); color: #000; font-weight: bold; cursor: pointer; transition: 0.2s; }
-        .res { margin-top: 8px; padding: 8px; background: #111; border-radius: 4px; font-size: 0.8rem; color: #00e676; display: none; word-wrap: break-word; }
-        
-        footer { text-align: center; padding: 50px; margin-top: 50px; border-top: 1px solid #222; color: #666; }
+        #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 5000; align-items: center; justify-content: center; }
+        .modal-box { width: 90%; max-width: 450px; background: #111; padding: 30px; border-radius: 30px; border: 2px solid var(--neon); text-align: center; }
+        .progress-bar { width: 100%; height: 10px; background: #222; border-radius: 10px; margin: 20px 0; overflow: hidden; }
+        #fill { width: 0%; height: 100%; background: var(--neon); box-shadow: 0 0 10px var(--neon); }
+        .btn-dl { background: var(--neon); color: black; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: none; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-<div class="hero">
-    <h1>توليف MEGA 100</h1>
-    <p>بوابتك الرقمية الشاملة لـ 100 أداة ذكية ومجانية</p>
+<div id="top-ad" class="ad-banner">🎁 شاهد العرض لفتح الرابط المباشر | ZIXOO PRO EXCLUSIVE</div>
+
+<div class="container">
+    <h1 style="color:var(--neon); text-shadow: 0 0 15px var(--neon); margin:0;">ZIXOO GIGANT</h1>
+    <p style="color:#666; font-size:12px; margin-bottom:30px;">100 أداة شغالة 100% - تحديث أبريل 2026</p>
+    <div class="grid" id="main-grid"></div>
 </div>
 
-<div class="search-area">
-    <input type="text" id="mainSearch" onkeyup="filterTools()" placeholder="ابحث في 100 أداة برمجية...">
-</div>
-
-<div class="grid" id="mainGrid">
+<div id="modal">
+    <div class="modal-box">
+        <h3 id="t-name" style="color:var(--neon); margin:0;"></h3>
+        <a id="ad-box" href="https://www.google.com" target="_blank" style="color:#ff0055; font-weight:bold; display:block; margin:20px 0; padding:12px; border:1px dashed #ff0055; border-radius:15px; text-decoration:none;">🔥 اضغط هنا للحصول على هديتك (إعلان)</a>
+        <div class="progress-bar"><div id="fill"></div></div>
+        <p id="status-txt" style="font-size:11px; color:#555;">جاري تجهيز الملف الآمن...</p>
+        <a id="final-link" href="#" target="_blank" class="btn-dl">تحميل مباشر الآن 🚀</a>
     </div>
+</div>
 
-<footer>
-    <p>© 2026 مشروع توليف العملاق | جميع الحقوق محفوظة لضميرك الحي</p>
-</footer>
+<div id="bottom-ad" class="ad-banner">إعلان: صيانة احترافية وتخطي حماية بمكناس</div>
 
 <script>
-    const tools = [
-        // قسم الأمان (1-10)
-        {id:1, t:"🔐 مولد كلمات سر", b:"توليد", f:()=>Math.random().toString(36).slice(-12)},
-        {id:2, t:"🛡️ فحص قوة السر", i:"text", b:"فحص", f:(v)=>v.length>8?"قوية":"ضعيفة"},
-        {id:3, t:"🔗 تشفير Base64", i:"text", b:"تشفير", f:(v)=>btoa(v)},
-        {id:4, t:"🔓 فك تشفير Base64", i:"text", b:"فك", f:(v)=>atob(v)},
-        {id:5, t:"🚫 منع النسخ", b:"تفعيل", f:()=>"تم تفعيل حماية النص"},
-        {id:6, t:"🧩 مولد UUID", b:"توليد", f:()=>crypto.randomUUID()},
-        {id:7, t:"🕵️ فحص الروابط الخفية", i:"text", b:"فحص", f:(v)=>v.length>20?"رابط مشبوه":"رابط عادي"},
-        {id:8, t:"🗝️ مولد كود PIN", b:"توليد", f:()=>Math.floor(1000+Math.random()*9000)},
-        {id:9, t:"🛑 فحص الإعلانات", b:"فحص", f:()=>"مانع الإعلانات نشط"},
-        {id:10, t:"🛡️ مولد أسماء أمان", b:"توليد", f:()=>"User_Shield_"+Math.floor(Math.random()*100)},
+    const MY_AD_LINK = "https://www.google.com"; // رابط إعلانك هنا
 
-        // قسم الحسابات (11-30)
-        {id:11, t:"🎂 حاسبة العمر", i:"date", b:"احسب", f:(v)=>(2026-new Date(v).getFullYear())+" سنة"},
-        {id:12, t:"💰 حاسبة الزكاة", i:"number", b:"احسب", f:(v)=>v*0.025},
-        {id:13, t:"⚖️ حاسبة BMI", i:"text", ph:"الوزن,الطول بالسم", b:"فحص", f:(v)=>{let[w,h]=v.split(','); return (w/(h/100)**2).toFixed(1)}},
-        {id:14, t:"🏷️ حاسبة الخصم", i:"text", ph:"السعر,الخصم%", b:"احسب", f:(v)=>{let[p,d]=v.split(','); return p-(p*d/100)}},
-        {id:15, t:"💵 دولار إلى يورو", i:"number", b:"حول", f:(v)=>(v*0.92).toFixed(2)},
-        {id:16, t:"📈 حاسبة الربح", i:"text", ph:"التكلفة,البيع", b:"احسب", f:(v)=>{let[c,s]=v.split(','); return s-c}},
-        {id:17, t:"🎲 حجر النرد", b:"ارمي", f:()=>Math.floor(Math.random()*6)+1},
-        {id:18, t:"🔢 رقم عشوائي", i:"number", ph:"أقصى رقم", b:"ولد", f:(v)=>Math.floor(Math.random()*v)},
-        {id:19, t:"➕ حاسبة الجمع", i:"text", ph:"10,20", b:"جمع", f:(v)=>eval(v.replace(',','+'))},
-        {id:20, t:"➖ حاسبة الطرح", i:"text", ph:"50,20", b:"طرح", f:(v)=>eval(v.replace(',','-'))},
-        {id:21, t:"✖️ جدول الضرب", i:"number", b:"ولد", f:(v)=>v*10},
-        {id:22, t:"📉 حاسبة القروض", i:"number", ph:"المبلغ", b:"فائدة 5%", f:(v)=>v*0.05},
-        {id:23, t:"📐 مساحة المربع", i:"number", b:"احسب", f:(v)=>v*v},
-        {id:24, t:"⭕ محيط الدائرة", i:"number", b:"احسب", f:(v)=>(2*3.14*v).toFixed(2)},
-        {id:25, t:"🧪 محول السوائل (لتر)", i:"number", b:"حول لمل", f:(v)=>v*1000},
-        {id:26, t:"⚖️ غرام إلى كيلو", i:"number", b:"حول", f:(v)=>v/1000},
-        {id:27, t:"🌡️ فهرنهايت لمئوي", i:"number", b:"حول", f:(v)=>((v-32)*5/9).toFixed(1)},
-        {id:28, t:"⏳ محول الثواني", i:"number", ph:"دقائق", b:"حول لثواني", f:(v)=>v*60},
-        {id:29, t:"📏 إنش إلى سم", i:"number", b:"حول", f:(v)=>v*2.54},
-        {id:30, t:"🏔️ حاسبة الارتفاع", i:"number", ph:"ضغط الجو", b:"احسب", f:(v)=>"100 متر (تقريبي)"},
+    // قاعدة البيانات الشاملة لـ 100 أداة
+    const toolsData = {
+        // السوفت وير (1-20)
+        "Odin Flash Tool": "https://samsungodin.com/download/Odin3_v3.14.4.zip",
+        "MTK Client": "https://github.com/bkerler/mtkclient/archive/refs/heads/main.zip",
+        "SamFw Tool": "https://samfw.com/blog/samfw-tool-4-9",
+        "ADB Installer": "https://forum.xda-developers.com/t/official-tool-windows-adb-fastboot-15-seconds-adb-installer-v1-4-3.2588979/",
+        "Fastboot Tool": "https://developer.android.com/studio/releases/platform-tools",
+        "Magisk Manager": "https://github.com/topjohnwu/Magisk/releases",
+        "LSPosed": "https://github.com/LSPosed/LSPosed/releases",
+        "Titanium Backup": "https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup",
+        "BuildProp Editor": "https://play.google.com/store/apps/details?id=com.jrummy.apps.build.prop.editor",
+        "Heads-up Disable": "https://play.google.com/store/apps/details?id=com.jamal2367.headsup",
+        "App Inspector": "https://play.google.com/store/apps/details?id=com.ubqsoft.sec01",
+        "System App Remover": "https://play.google.com/store/apps/details?id=com.jumobile.manager.systemapp",
+        "Battery Calibration": "https://play.google.com/store/apps/details?id=com.nema.batterycalibration",
+        "Mac Address Changer": "https://play.google.com/store/apps/details?id=com.wireless.macchanger",
+        "IMEI Analyzer": "https://play.google.com/store/apps/details?id=com.ب IMEI.analyzer",
+        "USB Debugging Enabler": "https://play.google.com/store/apps/details?id=com.arumcomm.usbdebugging",
+        "Kernel Auditor": "https://github.com/Grarak/KernelAdiutor/releases",
+        "BusyBox Installer": "https://play.google.com/store/apps/details?id=com.jrummy.liberty.toolbox",
+        "Root Checker": "https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck",
+        "Custom Recovery": "https://twrp.me/Devices/",
 
-        // قسم النصوص (31-50)
-        {id:31, t:"📏 عداد الحروف", i:"text", b:"احسب", f:(v)=>v.length},
-        {id:32, t:"📊 عداد الكلمات", i:"text", b:"احسب", f:(v)=>v.split(' ').length},
-        {id:33, t:"✍️ تكبير الخط", i:"text", b:"UP", f:(v)=>v.toUpperCase()},
-        {id:34, t:"✍️ تصغير الخط", i:"text", b:"low", f:(v)=>v.toLowerCase()},
-        {id:35, t:"🔄 عكس الجملة", i:"text", b:"اعكس", f:(v)=>v.split('').reverse().join('')},
-        {id:36, t:"🧹 تنظيف الفراغات", i:"text", b:"نظف", f:(v)=>v.trim()},
-        {id:37, t:"📝 مولد Lorem", b:"ولد", f:()=>"نص تجريبي احترافي للمصممين"},
-        {id:38, t:"🕵️ فحص الإيميل", i:"text", b:"فحص", f:(v)=>v.includes('@')?"صحيح":"خاطئ"},
-        {id:39, t:"🔗 طول الرابط", i:"text", b:"فحص", f:(v)=>v.length},
-        {id:40, t:"📢 نطق النص", i:"text", b:"نطق", f:(v)=>{speechSynthesis.speak(new SpeechSynthesisUtterance(v));return "جاري النطق"}},
-        {id:41, t:"🚫 حذف الأرقام", i:"text", b:"حذف", f:(v)=>v.replace(/[0-9]/g,'')},
-        {id:42, t:"🔢 استخراج الأرقام", i:"text", b:"استخراج", f:(v)=>v.match(/\d+/g)},
-        {id:43, t:"📜 مولد حكم", b:"أعطني", f:()=>"الوقت كالسيف"},
-        {id:44, t:"🏷️ مولد تاغات #", i:"text", b:"ولد", f:(v)=>"#"+v.replace(' ','_')},
-        {id:45, t:"🖋️ خطوط عشوائية", b:"غير", f:()=>{document.body.style.fontFamily='serif';return "تم"}},
-        {id:46, t:"📎 نسخ للنص", i:"text", b:"نسخ", f:(v)=>{navigator.clipboard.writeText(v);return "تم النسخ"}},
-        {id:47, t:"🔍 استبدال كلمة", i:"text", ph:"نص,قديم,جديد", b:"بدل", f:(v)=>{let[t,o,n]=v.split(',');return t.replace(o,n)}},
-        {id:48, t:"📧 مولد إيميل وهمي", b:"ولد", f:()=>Math.random().toString(36).slice(5)+"@test.com"},
-        {id:49, t:"💬 عداد الأسطر", i:"text", b:"احسب", f:(v)=>v.split('\n').length},
-        {id:50, t:"🔠 فحص الكابيتال", i:"text", b:"فحص", f:(v)=>v[0]===v[0].toUpperCase()?"تبدأ بكبير":"صغير"},
+        // المحاكيات (21-40)
+        "PPSSPP Gold": "https://www.ppsspp.org/downloads/",
+        "Dolphin Emulator": "https://play.google.com/store/apps/details?id=org.dolphinemu.dolphinemu",
+        "AetherSX2": "https://www.aethersx2.com/archive/",
+        "Citra 3DS": "https://citra-emu.org/download/",
+        "RetroArch": "https://play.google.com/store/apps/details?id=com.retroarch",
+        "Game Turbo": "https://play.google.com/store/apps/details?id=com.xiaomi.gameboosterglobal",
+        "GFX Tool": "https://play.google.com/store/apps/details?id=eu.tsoml.graphics_tool",
+        "Panda Mouse Pro": "https://play.google.com/store/apps/details?id=com.panda.mouse",
+        "Mantice Gamepad": "https://play.google.com/store/apps/details?id=app.mantispro.gamepad",
+        "FPS Meter": "https://play.google.com/store/apps/details?id=com.fpsmeter.monitor",
+        "Winlator v10.1": "https://github.com/brunodev85/winlator/releases",
+        "Exagear": "https://exagear.wiki/index.php?title=Download",
+        "Skyline": "https://skyline-emu.one/download/",
+        "DuckStation": "https://play.google.com/store/apps/details?id=com.github.stenzek.duckstation",
+        "HappyChick": "http://www.happychick.hk/en.html",
+        "Lucky Patcher": "https://www.luckypatchers.com/download/",
+        "JCheater": "https://play.google.com/store/apps/details?id=com.mofat.jcheater.vc",
+        "Skin Config": "https://play.google.com/store/apps/details?id=com.skin.config",
+        "Crosshair Pro": "https://play.google.com/store/apps/details?id=com.itunestools.crosshair",
+        "Lag Fixer": "https://play.google.com/store/apps/details?id=com.lagfix.speedup",
 
-        // (51-100) سيتم تكرار وتوليد وظائف متنوعة تقنية وصحية وعامة
-        {id:51, t:"💾 MB إلى GB", i:"number", b:"حول", f:(v)=>(v/1024).toFixed(2)},
-        {id:52, t:"🔋 فحص البطارية", b:"فحص", f:()=>"متصلة - 90%"},
-        {id:53, t:"🎨 مولد HEX", b:"ولد", f:()=>"#"+Math.floor(Math.random()*16777215).toString(16)},
-        {id:54, t:"📱 دقة الشاشة", b:"فحص", f:()=>window.innerWidth+"x"+window.innerHeight},
-        {id:55, t:"🌐 فحص الإنترنت", b:"فحص", f:()=>navigator.onLine?"متصل":"مقطوع"},
-        {id:56, t:"📅 تاريخ اليوم", b:"أظهر", f:()=>new Date().toLocaleDateString('ar-EG')},
-        {id:57, t:"⏰ الوقت الآن", b:"أظهر", f:()=>new Date().toLocaleTimeString()},
-        {id:58, t:"🌙 الوضع الليلي", b:"تبديل", f:()=>{document.body.style.filter='invert(1)';return "تم"}},
-        {id:59, t:"🚀 اختبار سرعة CPU", b:"ابدأ", f:()=>"جيد جداً"},
-        {id:60, t:"🖥️ ملء الشاشة", b:"تفعيل", f:()=>{document.documentElement.requestFullscreen();return "تم"}},
-        {id:100, t:"🎉 مبروك الـ 100", b:"احتفل", f:()=>"لقد أنجزت التحدي بنجاح!"}
-        // ... (تم اختصار البقية لضمان عمل الكود فورياً في ملف واحد)
-    ];
+        // ملفات وخصوصية (41-70)
+        "ZArchiver Pro": "https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver",
+        "ES File Explorer": "https://www.estrongs.com/",
+        "Solid Explorer": "https://play.google.com/store/apps/details?id=pl.solidexplorer2",
+        "SD Maid": "https://play.google.com/store/apps/details?id=eu.thedarken.sdm",
+        "CCleaner": "https://play.google.com/store/apps/details?id=com.piriform.ccleaner",
+        "Photo Recovery": "https://play.google.com/store/apps/details?id=com.defianttech.diskdigger",
+        "Video Compressor": "https://play.google.com/store/apps/details?id=com.idea.videocompress",
+        "PDF Converter": "https://play.google.com/store/apps/details?id=com.imagetopdf.pdfconverter",
+        "QR Scanner": "https://play.google.com/store/apps/details?id=com.google.zxing.client.android",
+        "App Lock": "https://play.google.com/store/apps/details?id=com.domobile.applock.watcher",
+        "VPN Turbo": "https://play.google.com/store/apps/details?id=free.vpn.unblock.proxy.turbovpn",
+        "AdAway": "https://adaway.org/",
+        "Dumpster": "https://play.google.com/store/apps/details?id=com.baloota.dumpster",
+        "DiskDigger": "https://play.google.com/store/apps/details?id=com.defianttech.diskdigger",
+        "Files by Google": "https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files",
+        "APK Editor": "https://apk-editor.en.uptodown.com/android",
+        "Hex Editor": "https://play.google.com/store/apps/details?id=com.tuba.hekxtuba",
+        "MT Manager": "https://mt2.cn/",
+        "Naptime": "https://play.google.com/store/apps/details?id=com.franco.doze",
+        "Greenify": "https://play.google.com/store/apps/details?id=com.oasisfeng.greenify",
+        "DNS Changer": "https://play.google.com/store/apps/details?id=com.burakgon.dnschanger",
+        "Speedtest": "https://play.google.com/store/apps/details?id=net.ookla.speedtest",
+        "NetCut": "https://arcai.com/download-netcut-android/",
+        "WPS Tester": "https://play.google.com/store/apps/details?id=com.sanity.wps-wpa-tester",
+        "WiFi Analyzer": "https://play.google.com/store/apps/details?id=com.vrem.wifianalyzer",
+        "InShot Pro": "https://play.google.com/store/apps/details?id=com.camerasideas.instashot",
+        "Alight Motion": "https://play.google.com/store/apps/details?id=alightcreative.motion",
+        "Canva Pro": "https://play.google.com/store/apps/details?id=com.canva.editor",
+        "Remove.bg": "https://play.google.com/store/apps/details?id=com.remove.bg",
+        "CamScanner": "https://play.google.com/store/apps/details?id=com.intsig.camscanner",
 
-    function render() {
-        const grid = document.getElementById('mainGrid');
-        tools.forEach(tool => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.innerHTML = `
-                <h3>${tool.t}</h3>
-                ${tool.i ? `<input type="${tool.i}" id="in${tool.id}" placeholder="${tool.ph || 'أدخل البيانات...'}">` : ''}
-                <button onclick="run(${tool.id})">${tool.b}</button>
-                <div id="res${tool.id}" class="res"></div>
-            `;
-            grid.appendChild(card);
-        });
-    }
-
-    window.run = (id) => {
-        const tool = tools.find(t => t.id === id);
-        const val = document.getElementById('in'+id)?.value;
-        const resDiv = document.getElementById('res'+id);
-        resDiv.innerText = "النتيجة: " + tool.f(val);
-        resDiv.style.display = "block";
+        // التواصل والأدوات الإضافية (71-100)
+        "Telegram": "https://telegram.org/dl/android/apk",
+        "TeraBox": "https://play.google.com/store/apps/details?id=com.dubox.drive",
+        "Firefox": "https://play.google.com/store/apps/details?id=org.mozilla.firefox",
+        "Facebook": "https://play.google.com/store/apps/details?id=com.facebook.katana",
+        "Messenger": "https://play.google.com/store/apps/details?id=com.facebook.orca",
+        "WhatsApp": "https://www.whatsapp.com/android/",
+        "CPU-Z": "https://play.google.com/store/apps/details?id=com.cpuid.cpu_z",
+        "Device Info HW": "https://play.google.com/store/apps/details?id=info.kfsoft.deviceid",
+        "AccuBattery": "https://play.google.com/store/apps/details?id=com.digibites.accubattery",
+        "Multi-Touch Test": "https://play.google.com/store/apps/details?id=com.the511plus.MultiTouchTester",
+        "Dead Pixel Test": "https://play.google.com/store/apps/details?id=com.zoomsen.deadpixeltest",
+        "Speaker Cleaner": "https://play.google.com/store/apps/details?id=com.luxdelux.speaker.cleaner",
+        "Microphone Test": "https://play.google.com/store/apps/details?id=com.p_soft.mictest",
+        "GPS Status": "https://play.google.com/store/apps/details?id=com.eclipsim.gpsstatus2",
+        "Sensor Box": "https://play.google.com/store/apps/details?id=ivonhoe.asensor",
+        "Shizuku": "https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api",
+        "Termux": "https://f-droid.org/en/packages/com.termux/",
+        "ChatGPT": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+        "Zixoo Support": "https://wa.me/212000000000"
     };
 
-    function filterTools() {
-        let q = document.getElementById('mainSearch').value.toLowerCase();
-        let cards = document.getElementsByClassName('card');
-        for (let c of cards) { c.style.display = c.innerText.toLowerCase().includes(q) ? 'block' : 'none'; }
+    const keys = Object.keys(toolsData);
+    const grid = document.getElementById('main-grid');
+
+    for(let i=0; i<100; i++) {
+        let name = keys[i] || "أداة تقنية #" + (i+1);
+        let link = toolsData[name] || "https://play.google.com/store/search?q=" + name;
+        grid.innerHTML += `
+            <div class="card" onclick="startProcess('${name}', '${link}')">
+                <b>#${i+1}</b>
+                <small>${name}</small>
+            </div>
+        `;
     }
 
-    render();
+    function startProcess(name, link) {
+        document.getElementById('t-name').innerText = name;
+        document.getElementById('ad-box').href = MY_AD_LINK;
+        document.getElementById('modal').style.display = 'flex';
+        document.getElementById('final-link').style.display = 'none';
+        let p = 0;
+        let bar = document.getElementById('fill');
+        let interval = setInterval(() => {
+            p += 2;
+            bar.style.width = p + "%";
+            if(p >= 100) {
+                clearInterval(interval);
+                document.getElementById('final-link').style.display = 'block';
+                document.getElementById('final-link').href = link;
+                document.getElementById('status-txt').innerText = "الرابط جاهز تماماً ✅";
+            }
+        }, 100);
+    }
+
+    window.onclick = function(e) { if(e.target == document.getElementById('modal')) document.getElementById('modal').style.display = 'none'; }
 </script>
+
 </body>
 </html>
+
